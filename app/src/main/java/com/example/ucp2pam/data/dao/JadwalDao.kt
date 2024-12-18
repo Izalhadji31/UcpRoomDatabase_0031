@@ -9,5 +9,5 @@ interface JadwalDao {
     suspend fun insertJadwal(jadwal: Jadwal)
 
     @Query("SELECT * FROM jadwal")
-    suspend fun getAllJadwalr(): List<Jadwal>
+    suspend fun getAllJadwal(): List<Jadwal>
 }

@@ -14,11 +14,11 @@ interface DokterDao {
     suspend fun getAllDokter(): List<Dokter>
 
     @Update
-    suspend fun updateBarang(dokter: Dokter)
+    suspend fun updateDokter(dokter: Dokter)
 
     @Delete
-    suspend fun deleteBarang(dokter: Dokter)
+    suspend fun deleteDokter(dokter: Dokter)
 
-    @Query("SELECT * FROM dokter WHERE id = :id")
+    @Query("SELECT * FROM dokter WHERE idDokter = :id")
     suspend fun getDetailDokter(id: Int): Dokter
 }
