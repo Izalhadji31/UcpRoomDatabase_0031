@@ -1,5 +1,8 @@
 package com.example.ucp2pam.data.entity
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
 @Entity(tableName = "dokter")
 data class Dokter(
     @PrimaryKey(autoGenerate = true)
