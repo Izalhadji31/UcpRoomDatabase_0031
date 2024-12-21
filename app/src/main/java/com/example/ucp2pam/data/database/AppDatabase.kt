@@ -11,22 +11,24 @@ import com.example.ucp2pam.data.entity.Jadwal
 
 @Database(entities = [Dokter::class, Jadwal::class], version = 1, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
-    abstract fun jadwalDao(): JadwalDao
+
+    // Mendefinisikan fungsi untuk mengakses DAO Dokter dan Jadwal
     abstract fun dokterDao(): DokterDao
+    abstract fun jadwalDao(): JadwalDao
 
     companion object {
         @Volatile
-        private var INSTANCE: AppDatabase? = null
+        private var instance: AppDatabase? = null
 
         fun getDatabase(context: Context): AppDatabase {
-            return INSTANCE ?: synchronized(this) {
-                val instance = Room.databaseBuilder(
+            return instance ?: synchronized(this) {
+                Room.databaseBuilder(
                     context.applicationContext,
                     AppDatabase::class.java,
-                    "inventory_database"
-                ).build()
-                INSTANCE = instance
-                instance
+                    "RsDatabase"
+                )
+                    .build()
+                    .also { instance = it }
             }
         }
     }
