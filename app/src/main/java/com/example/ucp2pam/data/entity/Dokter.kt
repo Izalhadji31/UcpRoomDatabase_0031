@@ -7,9 +7,9 @@ import androidx.room.PrimaryKey
 data class Dokter(
     @PrimaryKey(autoGenerate = true)
     val idDokter: Dokter,
-    val nama: String,
+    val namaDokter: String,
     val spesialis: String,
     val klinik: String,
-    val NoHp : String,
-    val JamKerja: String
+    val noHpDokter : String,
+    val jamKerja: String
 )
