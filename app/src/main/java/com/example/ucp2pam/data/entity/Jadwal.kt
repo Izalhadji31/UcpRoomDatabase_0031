@@ -9,7 +9,7 @@ data class Jadwal(
     val idjadwal: Int = 0,
     val namaDokter: String,
     val namaPasien: String,
-    val noHp: String,
+    val noHpPasien: String,
     val tanggalKonsultasi: String,
     val Status: String
 )
