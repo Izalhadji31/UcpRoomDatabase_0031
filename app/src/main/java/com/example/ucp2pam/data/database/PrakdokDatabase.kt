@@ -24,7 +24,7 @@ abstract class PrakdokDatabase : RoomDatabase(){
                 Room.databaseBuilder(
                     context.applicationContext,
                     PrakdokDatabase::class.java, //class database
-                    "RsDatabase" //nama database
+                    "PrakdokDatabase" //nama database
                 )
                     .build().also { Instance = it }
             })
