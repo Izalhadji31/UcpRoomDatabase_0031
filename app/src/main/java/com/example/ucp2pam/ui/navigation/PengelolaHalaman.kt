@@ -80,6 +80,9 @@ fun PengelolaHalaman(
                 onAddJdwl ={
                     navController.navigate(DestinationJadwalInsert.route)
                 },
+                onBack = {
+                    navController.popBackStack()
+                },
                 modifier = modifier
             )
         }
