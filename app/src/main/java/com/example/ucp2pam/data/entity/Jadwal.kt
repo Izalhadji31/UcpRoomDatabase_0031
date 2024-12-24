@@ -3,13 +3,13 @@ package com.example.ucp2pam.data.entity
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "Jadwal")
+@Entity(tableName = "jadwal")
 data class Jadwal(
-    @PrimaryKey(autoGenerate = true)
-    val idjadwal: Int = 0,
+    @PrimaryKey
+    val idJadwal: String,
     val namaDokter: String,
     val namaPasien: String,
     val noHpPasien: String,
     val tanggalKonsultasi: String,
-    val Status: String
+    val status: String,
 )

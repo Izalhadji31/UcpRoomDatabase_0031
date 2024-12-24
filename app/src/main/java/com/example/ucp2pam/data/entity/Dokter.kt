@@ -6,10 +6,10 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "dokter")
 data class Dokter(
     @PrimaryKey
-    val idDokter:Int = 0,
+    val idDokter: String,
     val namaDokter: String,
     val spesialis: String,
     val klinik: String,
-    val noHpDokter : String,
-    val jamKerja: String
+    val noHpDokter: String,
+    val jamKerja: String,
 )
