@@ -7,4 +7,9 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="jantung_color">#FA09C9</color>
+    <color name="anak_color">#025210</color>
+    <color name="kulit_color">#D603F6</color>
+    <color name="saraf_color">#DFED05</color>
 </resources>
