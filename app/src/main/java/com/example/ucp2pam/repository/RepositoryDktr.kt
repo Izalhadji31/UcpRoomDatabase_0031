@@ -1,14 +1,12 @@
 package com.example.ucp2pam.repository
 
-import com.example.ucp2pam.data.dao.DokterDao
 import com.example.ucp2pam.data.entity.Dokter
+import kotlinx.coroutines.flow.Flow
 
 interface RepositoryDktr {
-        class DokterRepository(private val dao: DokterDao) {
-                suspend fun insertDokter(dokter: Dokter) = dao.insertDokter(dokter)
-                suspend fun getAllDokter() = dao.getAllDokter()
-                suspend fun updateDokter(dokter: Dokter) = dao.updateDokter(dokter)
-                suspend fun deleteDokter(dokter: Dokter) = dao.deleteDokter(dokter)
-                suspend fun getDetailDokter(idDokter: Int) = dao.getDetailDokter(idDokter)
-        }
+        suspend fun insertDktr(dokter: Dokter)
+
+        fun getAllDktr(): Flow<List<Dokter>>
+
+        fun getDktr(idDktr: String): Flow<Dokter>
 }
