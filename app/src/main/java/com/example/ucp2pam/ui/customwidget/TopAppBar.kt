@@ -1,5 +1,6 @@
 package com.example.ucp2pam.ui.customwidget
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -10,10 +11,13 @@ import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.colorResource
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-
+import com.example.ucp2pam.R
 
 @Composable
 fun TopAppBar(
@@ -25,8 +29,9 @@ fun TopAppBar(
     Box(
         modifier = Modifier
             .fillMaxWidth()
+            .background(color = colorResource(id = R.color.purple_200))
             .padding(16.dp),
-        contentAlignment = Alignment.Center // Pastikan konten di tengah
+        contentAlignment = Alignment.Center
     ) {
         if (showBackButton) {
             Row(
